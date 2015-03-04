@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+
+\usepackage{mathspec, indentfirst}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\setmathfont(Digits,Latin,Greek){TeX Gyre Pagella}
+
+% Set 1 inch margin on each side.  Page numbers, if any, appear in the margin.
+\setlength{\hoffset}{0in}
+\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-1in}
+\addtolength{\textwidth}{-\hoffset}
+\addtolength{\textwidth}{-\oddsidemargin}
+\addtolength{\textwidth}{-1in} % Set the right margin here
+\setlength{\voffset}{0in} 
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-1in}
+\addtolength{\textheight}{-\topmargin}
+\addtolength{\textheight}{-\headheight}
+\addtolength{\textheight}{-\headsep}
+\addtolength{\textheight}{-1in} % Set the bottom margin here
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf Computer Security } \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{Scribe: #4}{Lecture #1}}
+
+\begin{document}
+
+\lecture{NUMBER --- DATE, 2015}{Spring 2015}{Prof.\ Hao Chen}{YOUR NAME}
+
+\section{Overview}
+
+In the last lecture we \ldots.
+
+In this lecture we \ldots.
+
+\section{Main Section}
+
+We begin by describing the problem \ldots.
+Make sure to use sections and subsections.
+
+\subsection{Blah blah blah}
+Here is a subsection.
+
+\subsubsection{Blah blah blah}
+Here is a subsubsection. You can use these as well.
+
+\paragraph{Question:}
+How would you use boldface?
+
+\paragraph{Example:}
+This is an example showing how to use boldface to 
+help organize your lectures.
+
+
+\paragraph{Some Formatting.}
+Here is some formatting that you can use in your notes:
+\begin{itemize}
+\item {\em Item One} -- This is the first item.
+\item {\em Item Two} -- This is the second item.
+\item \dots and here are other items.
+\end{itemize}
+
+If you need to number things, you can use this style:
+\begin{enumerate}
+\item {\em Item One} -- Again, this is the first item.
+\item {\em Item Two} -- Again, this is the second item.
+\item \dots and here are other items.
+\end{enumerate}
+
+\end{document}

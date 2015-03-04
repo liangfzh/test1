@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Computer Security</title>
+<script src="http://shtech.org/js/jquery/jquery.min.js"></script> 
+<link rel="stylesheet" href="http://shtech.org/js/tablesorter/css/theme.jui.css">
+<link rel="stylesheet" href="http://shtech.org/js/jquery-ui-themes/themes/redmond/jquery-ui.min.css">
+<script src="http://shtech.org/js/tablesorter/js/jquery.tablesorter.min.js"></script>
+<script src="http://shtech.org/js/tablesorter/js/jquery.tablesorter.widgets.min.js"></script>
+<script>
+$(function() {
+    $(".tablesorter").tablesorter({
+        theme: 'jui',
+        headerTemplate: '{content} {icon}',
+        widgets: ['uitheme', 'zebra'],
+        widgetOptions : {
+          zebra: ["even", "odd"],
+        }
+    });
+});
+</script>
+<style>
+ code {background-color: #ddeeff; color: #000000;}
+</style>
+</head>
+<body>
+<!--
+<nav>
+<a href="#schedule">Schedule</a>
+</nav>
+-->
+<header>
+<h2>Computer Security. Spring 2015</h2>
+<table>
+<tr><td><b>Lectures</b></td><td>Wednesday 0830-1000, Friday 1015-1145. Room 217.</td></tr>
+<tr><td><b>Office hours</b></td><td>TBD.</td></tr>
+<tr><td><b>Instructors</b></td><td>Chen, Hao &lt;<code>chenhao AT shanghaitech.edu.cn</code>&gt;<br>
+Zhang, LiangFeng &lt;<code>zhanglf AT shanghaitech.edu.cn</code>&gt;</td></tr>
+<tr><td></td><td></td></tr>
+</table>
+</header>
+<section>
+<table id="reading" class="tablesorter">
+<caption>Schedule</caption>
+<thead><tr><th class="{sorter: false}">Week</th>
+<th class="{sorter: false}">Date</th>
+<th class="{sorter: false}">Number</th>
+<th class="{sorter:false}">Topic</th>
+<th class="{sorter: false}">Reading</th>
+<th class="{sorter: false}">Notes</th>
+</tr></thead>
+
+<tbody>
+<tr>
+<td rowspan="2">1</td><td>03-04</td>
+<td>1</td>
+<td>Principles of security</td>
+<td><a
+href="http://web.mit.edu/Saltzer/www/publications/protection/Basic.html">Basic
+ principles of information protection</a>. Saltzer and Schroeder.<br/>
+ (Only read Section A: Considerations Surrounding the Study of Protection)</td>
+<td></td>
+</tr>
+
+<tr>
+<td>03-06</td>
+<td>2</td>
+<td>Historical Ciphers, Perfectly Secure Encryption</td>
+<td>Bellare and Rogaway, Lindell</td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">2</td><td>03-11</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>03-13</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">3</td><td>03-18</td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>03-20</td>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">4</td><td>03-25</td>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>03-27</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">5</td><td>04-01</td>
+<td>9</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>04-03</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">6</td><td>04-08</td>
+<td>11</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>04-10</td>
+<td>12</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">7</td><td>04-15</td>
+<td>13</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>04-17</td>
+<td>14</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">8</td><td>04-22</td>
+<td>15</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>04-24</td>
+<td>16</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">9</td><td>04-29</td>
+<td>17</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>05-01</td>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">10</td><td>05-06</td>
+<td>19</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>05-08</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">11</td><td>05-13</td>
+<td>21</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>05-15</td>
+<td>22</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">12</td><td>05-20</td>
+<td>23</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>05-22</td>
+<td>24</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">13</td><td>05-27</td>
+<td>25</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>05-29</td>
+<td>26</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">14</td><td>06-03</td>
+<td>27</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>06-05</td>
+<td>28</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">15</td><td>06-10</td>
+<td>29</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>06-12</td>
+<td>30</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">16</td><td>06-17</td>
+<td>31</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>06-19</td>
+<td>32</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td rowspan="2">17</td><td>06-24</td>
+<td>33</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>06-26</td>
+<td>34</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</tbody>
+</table>
+
+<h3>Goals</h3>
+<p>This course introduces principles, mechanisms, and implementations
+of computer security.  You will learn how hackers attack systems,
+how to defend against the attacks, and how to design systems to
+withstand the attacks.
+</p>
+
+<h3>Topics</h3>
+<ul>
+<li>Security principles</li>
+
+<li>Security Mechanisms
+<ul>
+<li>Cryptography: symmetric key, public key, PKI, key management</li>
+<li>Authentication: password, challenge/response, cryptographic protocols</li>
+<li>Access control: access control list, capabilities, theories</li>
+<li>Network security: security mechanisms on the Internet, firewall,
+intrusion detection</li>
+<li>Confinement: isolation, covert channels</li>
+<li>Security policies</li>
+</ul>
+</li>
+
+<li>Practical security challenges
+<ul>
+<li>Software vulnerabilities and secure programming.</li>
+<li>Web security.</li>
+<li>Mobile security.</li>
+</ul>
+</li>
+
+<li>Other topics as time permits and according to student interest.</li>
+</ul>
+
+<h3>Requirements and grading</h3>
+<ul>
+<li><span style="font-weight: bold;">Reading</span>: We will discuss research papers.  You shall read the assigned reading <em>before</em>
+each class.
+</li>
+<li id="scribe"><span style="font-weight: bold;">Scribe</span>:
+<ul>
+<li>Install TexLive and TeX Gyre fonts from your Linux distribution (If you run Ubuntu, install the <code>texlive-full</code> and <code>tex-gyre</code> packages).  If you run other operating systems (e.g., Windows), you may download <a href="https://www.tug.org/texlive/">TexLive</a> and <a href="http://www.gust.org.pl/projects/e-foundry/tex-gyre/">TeX Gyre fonts</a>.</li>
+<li>Read a XeLaTeX tutorial, e.g., <a href="http://wiki.xelatex.org/doku.php?id=basic_document">the structure of a basic xelatex document</a>.  If you know LaTeX, learning XeLaTeX takes just a few minutes.</li>
+<li>Use this <a href="scribe.tex">template</a> for your scribe.</li>
+<li>Name your scribe <i>lecture_number</i>.tex, e.g., <code>1.tex</code>.</li>
+<li>Email the instructor your scribe within three days of the lecture.</li>
+</ul>
+</li>
+<li><span style="font-weight: bold;">Grading</span> (subject to change): scribe: 40%;
+project: 50%; class participation: 10%.
+</li>
+</ul>
+
+<h3>Warning</h3>
+
+<p>From time to time, we may discuss vulnerabilities in
+widely-deployed computer systems. This is not intended as an
+invitation to exploit those vulnerabilities. It is important that
+we be able to discuss real-world experience candidly, and students are
+expected to behave responsibly.</p>
+
+<p>The university's policy (and my policy) on this should be clear: you
+may not break into machines that are not your own; you may not attempt
+to attack or subvert system security. Breaking into other people's
+systems is i, and the existence of a security hole is no
+excuse.
+</p>
+
+<h3>Feedback</h3>
+<p>We always welcome any feedback on what we could be doing better.
+You are also welcome to send us feedback anonymously if you like.</p>
+</section>
+<footer>
+<hr style="clear: both;"/>
+<div style="float:left">
+<!--<address>
+Chen, Hao &lt;<code>os</code> AT <code>shtech.org</code>&gt;
+</address> -->
+Last modified: 2015-02-27.
+</div>
+<div style="float:right">
+<a href="http://validator.w3.org/check/referer">
+  <img src="http://shtech.org/image/html5-40.png" alt="Valid HTML 5!" />
+</a>
+</div>
+</footer>
+</body>
+</html>
